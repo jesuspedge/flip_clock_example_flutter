@@ -26,7 +26,7 @@ class _FlipClockPageState extends State<FlipClockPage> {
 
   @override
   void dispose() {
-    _timerController.close();
+    unawaited(_timerController.close());
     _timer.cancel();
     super.dispose();
   }

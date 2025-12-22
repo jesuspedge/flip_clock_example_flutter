@@ -80,7 +80,7 @@ class _FlipNumberWidgetState extends State<FlipNumberWidget>
         ? '0$_numberWhenAnimationEnds'
         : _numberWhenAnimationEnds.toString();
 
-    if (_numberWhenAnimationEnds != widget.number) initAnimation();
+    if (_numberWhenAnimationEnds != widget.number) unawaited(initAnimation());
 
     return Column(
       mainAxisSize: MainAxisSize.min,
