@@ -83,7 +83,7 @@ class _FlipNumberWidgetState extends State<FlipNumberWidget>
     if (_numberWhenAnimationEnds != widget.number) unawaited(initAnimation());
 
     return Column(
-      mainAxisSize: MainAxisSize.min,
+      spacing: 2,
       children: [
         ClipRRect(
           child: Stack(
@@ -115,7 +115,6 @@ class _FlipNumberWidgetState extends State<FlipNumberWidget>
             ],
           ),
         ),
-        const SizedBox(height: 2),
         ClipRect(
           child: Stack(
             children: [
